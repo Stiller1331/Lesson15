@@ -91,6 +91,36 @@ body {
     background-size: contain;
 }
 
+.burger {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 40px;
+    right: 15px;
+    width: 26px;
+    height: 26px;
+}
+
+.burger>span,
+.burger>span::before,
+.burger>span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+}
+
+.burger>span::before {
+    content: '';
+    top: -8px;
+}
+
+.burger>span::after {
+    content: '';
+    top: 8px;
+}
+
 .all {
     flex-direction: column;
     display: flex;
@@ -798,6 +828,10 @@ h3 {
     }
 
     .language {
+        display: none;
+    }
+
+    .burger {
         display: none;
     }
 
